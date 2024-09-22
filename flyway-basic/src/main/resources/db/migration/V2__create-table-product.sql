@@ -1,0 +1,7 @@
+CREATE TABLE product (
+  id BIGINT NOT NULL,
+   uuid UUID NOT NULL,
+   name VARCHAR(255) NOT NULL,
+   price VARCHAR(255) NOT NULL,
+   CONSTRAINT pk_product PRIMARY KEY (id)
+);
