@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat WebSocket</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+</head>
+<body>
+<div class="chat-container">
+    <div class="chat-header">Chat WebSocket</div>
+    <div class="chat-messages" id="chat-messages">
+        <ul id="messages"></ul>
+    </div>
+    <div class="chat-form">
+        <input id="username" placeholder="Seu nome"/>
+        <input id="message" placeholder="Mensagem"/>
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

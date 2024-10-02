@@ -1,0 +1,140 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container {
+    width: 60%; /* Aumenta a largura em telas grandes */
+    max-width: 800px; /* Define uma largura máxima */
+    min-width: 320px; /* Define uma largura mínima para manter o layout em telas pequenas */
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: hidden;
+    background-color: #f9f9f9;
+    transition: all 0.3s;
+}
+
+.chat-messages ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chat-messages li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #e1f5fe;
+    border-radius: 5px;
+    font-size: 1rem;
+    word-wrap: break-word;
+}
+
+.chat-form {
+    padding: 10px;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chat-form input[type="text"] {
+    width: 65%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    flex: 1;
+}
+
+.chat-form button {
+    width: 30%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+.chat-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade para telas médias */
+@media (max-width: 768px) {
+    .chat-container {
+        width: 80%; /* Ajusta a largura para 80% em telas médias */
+    }
+
+    .chat-header {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .chat-form input[type="text"], .chat-form button {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .chat-form button {
+        width: 35%;
+    }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+    .chat-container {
+        width: 95%; /* Ocupa quase toda a largura em telas pequenas */
+    }
+
+    .chat-header {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .chat-form input[type="text"], .chat-form button {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+
+    .chat-form button {
+        width: 40%;
+    }
+
+    .chat-messages li {
+        font-size: 0.8rem;
+    }
+}
+
+/* Mostra o scroll apenas após 10 mensagens */
+.scrollable {
+    overflow-y: scroll;
+    max-height: 300px;
+}
